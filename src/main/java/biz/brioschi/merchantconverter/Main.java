@@ -1,8 +1,8 @@
 package biz.brioschi.merchantconverter;
 
+import biz.brioschi.merchantconverter.converter.Converter;
 import biz.brioschi.merchantconverter.intergalacticmoney.EarthMapper;
 import biz.brioschi.merchantconverter.intergalacticmoney.IntergalacticMapper;
-import biz.brioschi.merchantconverter.intergalacticmoney.MoneyMapper;
 import biz.brioschi.merchantconverter.intergalacticmoney.TimeMasterMapper;
 
 import java.util.*;
@@ -46,15 +46,12 @@ public class Main {
     }
 
     private static Converter buildConverter(OptionalInt timeMasterFlag) {
-        List<MoneyMapper> mappers = new ArrayList<>();
-        mappers.add(new EarthMapper());
         if (timeMasterFlag.isPresent() && timeMasterFlag.getAsInt() == 1) {
             System.out.printf("Enabled the TimeMaster Dialect\n");
-            mappers.add(new TimeMasterMapper());
+            return new Converter(new EarthMapper(), new TimeMasterMapper());
         } else {
-            mappers.add(new IntergalacticMapper());
+            return new Converter(new EarthMapper(), new IntergalacticMapper());
         }
-        return new Converter(mappers);
     }
 
 }

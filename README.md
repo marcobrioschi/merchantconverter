@@ -6,7 +6,9 @@
 
 * I separated the responsibilities for each representation and for the intergalactic (due to his complexity) I separated the builder from the formatter. 
 
-* If use the flag _--timemaster_ the program enable the dialect of TimeMaster plane (that use III instead of IV)
+* If you use the flag _--timemaster_ the program enable the dialect of TimeMaster planet that use III instead of IV (I used and adapter)
+
+* You can write expression using operators '+' '-' '/' '*' and parenthesis
 
 ### Notes
 
@@ -14,5 +16,4 @@
 
 ### Options
 
-* add a parser for expression
 * complete the build.gradle and travis build

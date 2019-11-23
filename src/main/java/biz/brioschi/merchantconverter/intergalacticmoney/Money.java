@@ -23,4 +23,20 @@ public class Money {
         return Objects.hash(money);
     }
 
+    public Money add(Money secondOperator) {
+        return new Money(this.money + secondOperator.money);
+    }
+
+    public Money minus(Money secondOperator) {
+        return new Money(this.money - secondOperator.money);
+    }
+
+    public Money mult(Money secondOperator) {
+        return new Money(this.money * secondOperator.money);
+    }
+
+    public Money div(Money secondOperator) {
+        return new Money(this.money / secondOperator.money);
+    }
+
 }
