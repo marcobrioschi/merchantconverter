@@ -2,7 +2,7 @@
 
 ### Instructions
 
-Import the gradle project and run the class --Main--. If you use the flag _--timemaster_ the program enable the dialect of TimeMaster planet that use IIII instead of IV.
+Import the gradle project and run the class _Main_. If you use the flag _--timemaster_ the program enable the dialect of TimeMaster planet that use IIII instead of IV.
 
 ### Design choices
 
