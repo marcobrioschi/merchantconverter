@@ -6,6 +6,8 @@
 
 * I separated the responsibilities for each representation and for the intergalactic (due to his complexity) I separated the builder from the formatter. 
 
+* If use the flag _--timemaster_ the program enable the dialect of TimeMaster plane (that use III instead of IV)
+
 ### Notes
 
 * To validate the intergalactic number it's also possible to use a regular expression like _^M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$_ but I realized only at the end :-(
@@ -13,5 +15,4 @@
 ### Options
 
 * add a parser for expression
-* add a flag for enable IIII instead of IV
 * complete the build.gradle and travis build
