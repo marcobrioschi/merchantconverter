@@ -6,13 +6,13 @@ start :
 
 sumexpression
     :
-    |   multexpression (PLUS | MINUS) sumexpression
+    |   sumexpression (PLUS | MINUS) multexpression
     |   multexpression
     ;
 
 multexpression
     :
-    |   value (MULT | DIV) multexpression
+    |   multexpression (MULT | DIV) value
     |   value
     ;
 

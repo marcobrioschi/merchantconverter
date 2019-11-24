@@ -112,7 +112,7 @@ public class IntergalacticExpressionParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(8);
-			sumexpression();
+			sumexpression(0);
 			setState(9);
 			match(EOF);
 			}
@@ -149,44 +149,68 @@ public class IntergalacticExpressionParser extends Parser {
 	}
 
 	public final SumexpressionContext sumexpression() throws RecognitionException {
-		SumexpressionContext _localctx = new SumexpressionContext(_ctx, getState());
-		enterRule(_localctx, 2, RULE_sumexpression);
+		return sumexpression(0);
+	}
+
+	private SumexpressionContext sumexpression(int _p) throws RecognitionException {
+		ParserRuleContext _parentctx = _ctx;
+		int _parentState = getState();
+		SumexpressionContext _localctx = new SumexpressionContext(_ctx, _parentState);
+		SumexpressionContext _prevctx = _localctx;
+		int _startState = 2;
+		enterRecursionRule(_localctx, 2, RULE_sumexpression, _p);
 		int _la;
 		try {
-			setState(17);
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(13);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,0,_ctx) ) {
 			case 1:
-				enterOuterAlt(_localctx, 1);
 				{
 				}
 				break;
 			case 2:
-				enterOuterAlt(_localctx, 2);
 				{
 				setState(12);
-				multexpression();
-				setState(13);
-				_la = _input.LA(1);
-				if ( !(_la==PLUS || _la==MINUS) ) {
-				_errHandler.recoverInline(this);
-				}
-				else {
-					if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
-					_errHandler.reportMatch(this);
-					consume();
-				}
-				setState(14);
-				sumexpression();
+				multexpression(0);
 				}
 				break;
-			case 3:
-				enterOuterAlt(_localctx, 3);
-				{
-				setState(16);
-				multexpression();
+			}
+			_ctx.stop = _input.LT(-1);
+			setState(20);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,1,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					if ( _parseListeners!=null ) triggerExitRuleEvent();
+					_prevctx = _localctx;
+					{
+					{
+					_localctx = new SumexpressionContext(_parentctx, _parentState);
+					pushNewRecursionContext(_localctx, _startState, RULE_sumexpression);
+					setState(15);
+					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+					setState(16);
+					_la = _input.LA(1);
+					if ( !(_la==PLUS || _la==MINUS) ) {
+					_errHandler.recoverInline(this);
+					}
+					else {
+						if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+						_errHandler.reportMatch(this);
+						consume();
+					}
+					setState(17);
+					multexpression(0);
+					}
+					} 
 				}
-				break;
+				setState(22);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,1,_ctx);
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -195,7 +219,7 @@ public class IntergalacticExpressionParser extends Parser {
 			_errHandler.recover(this, re);
 		}
 		finally {
-			exitRule();
+			unrollRecursionContexts(_parentctx);
 		}
 		return _localctx;
 	}
@@ -221,44 +245,68 @@ public class IntergalacticExpressionParser extends Parser {
 	}
 
 	public final MultexpressionContext multexpression() throws RecognitionException {
-		MultexpressionContext _localctx = new MultexpressionContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_multexpression);
+		return multexpression(0);
+	}
+
+	private MultexpressionContext multexpression(int _p) throws RecognitionException {
+		ParserRuleContext _parentctx = _ctx;
+		int _parentState = getState();
+		MultexpressionContext _localctx = new MultexpressionContext(_ctx, _parentState);
+		MultexpressionContext _prevctx = _localctx;
+		int _startState = 4;
+		enterRecursionRule(_localctx, 4, RULE_multexpression, _p);
 		int _la;
 		try {
+			int _alt;
+			enterOuterAlt(_localctx, 1);
+			{
 			setState(25);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,1,_ctx) ) {
+			switch ( getInterpreter().adaptivePredict(_input,2,_ctx) ) {
 			case 1:
-				enterOuterAlt(_localctx, 1);
 				{
 				}
 				break;
 			case 2:
-				enterOuterAlt(_localctx, 2);
-				{
-				setState(20);
-				value();
-				setState(21);
-				_la = _input.LA(1);
-				if ( !(_la==MULT || _la==DIV) ) {
-				_errHandler.recoverInline(this);
-				}
-				else {
-					if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
-					_errHandler.reportMatch(this);
-					consume();
-				}
-				setState(22);
-				multexpression();
-				}
-				break;
-			case 3:
-				enterOuterAlt(_localctx, 3);
 				{
 				setState(24);
 				value();
 				}
 				break;
+			}
+			_ctx.stop = _input.LT(-1);
+			setState(32);
+			_errHandler.sync(this);
+			_alt = getInterpreter().adaptivePredict(_input,3,_ctx);
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					if ( _parseListeners!=null ) triggerExitRuleEvent();
+					_prevctx = _localctx;
+					{
+					{
+					_localctx = new MultexpressionContext(_parentctx, _parentState);
+					pushNewRecursionContext(_localctx, _startState, RULE_multexpression);
+					setState(27);
+					if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+					setState(28);
+					_la = _input.LA(1);
+					if ( !(_la==MULT || _la==DIV) ) {
+					_errHandler.recoverInline(this);
+					}
+					else {
+						if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
+						_errHandler.reportMatch(this);
+						consume();
+					}
+					setState(29);
+					value();
+					}
+					} 
+				}
+				setState(34);
+				_errHandler.sync(this);
+				_alt = getInterpreter().adaptivePredict(_input,3,_ctx);
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -267,7 +315,7 @@ public class IntergalacticExpressionParser extends Parser {
 			_errHandler.recover(this, re);
 		}
 		finally {
-			exitRule();
+			unrollRecursionContexts(_parentctx);
 		}
 		return _localctx;
 	}
@@ -295,46 +343,39 @@ public class IntergalacticExpressionParser extends Parser {
 		ValueContext _localctx = new ValueContext(_ctx, getState());
 		enterRule(_localctx, 6, RULE_value);
 		try {
-			setState(34);
+			setState(42);
 			_errHandler.sync(this);
-			switch (_input.LA(1)) {
-			case EOF:
-			case RP:
-			case PLUS:
-			case MINUS:
-			case MULT:
-			case DIV:
+			switch ( getInterpreter().adaptivePredict(_input,4,_ctx) ) {
+			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
 				}
 				break;
-			case LP:
+			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(28);
+				setState(36);
 				match(LP);
-				setState(29);
-				sumexpression();
-				setState(30);
+				setState(37);
+				sumexpression(0);
+				setState(38);
 				match(RP);
 				}
 				break;
-			case INT:
+			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(32);
+				setState(40);
 				match(INT);
 				}
 				break;
-			case ROMAN:
+			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(33);
+				setState(41);
 				match(ROMAN);
 				}
 				break;
-			default:
-				throw new NoViableAltException(this);
 			}
 		}
 		catch (RecognitionException re) {
@@ -348,18 +389,44 @@ public class IntergalacticExpressionParser extends Parser {
 		return _localctx;
 	}
 
+	public boolean sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
+		switch (ruleIndex) {
+		case 1:
+			return sumexpression_sempred((SumexpressionContext)_localctx, predIndex);
+		case 2:
+			return multexpression_sempred((MultexpressionContext)_localctx, predIndex);
+		}
+		return true;
+	}
+	private boolean sumexpression_sempred(SumexpressionContext _localctx, int predIndex) {
+		switch (predIndex) {
+		case 0:
+			return precpred(_ctx, 2);
+		}
+		return true;
+	}
+	private boolean multexpression_sempred(MultexpressionContext _localctx, int predIndex) {
+		switch (predIndex) {
+		case 1:
+			return precpred(_ctx, 2);
+		}
+		return true;
+	}
+
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\13\'\4\2\t\2\4\3"+
-		"\t\3\4\4\t\4\4\5\t\5\3\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\5\3\24\n\3\3"+
-		"\4\3\4\3\4\3\4\3\4\3\4\5\4\34\n\4\3\5\3\5\3\5\3\5\3\5\3\5\3\5\5\5%\n\5"+
-		"\3\5\2\2\6\2\4\6\b\2\4\3\2\5\6\3\2\7\b\2)\2\n\3\2\2\2\4\23\3\2\2\2\6\33"+
-		"\3\2\2\2\b$\3\2\2\2\n\13\5\4\3\2\13\f\7\2\2\3\f\3\3\2\2\2\r\24\3\2\2\2"+
-		"\16\17\5\6\4\2\17\20\t\2\2\2\20\21\5\4\3\2\21\24\3\2\2\2\22\24\5\6\4\2"+
-		"\23\r\3\2\2\2\23\16\3\2\2\2\23\22\3\2\2\2\24\5\3\2\2\2\25\34\3\2\2\2\26"+
-		"\27\5\b\5\2\27\30\t\3\2\2\30\31\5\6\4\2\31\34\3\2\2\2\32\34\5\b\5\2\33"+
-		"\25\3\2\2\2\33\26\3\2\2\2\33\32\3\2\2\2\34\7\3\2\2\2\35%\3\2\2\2\36\37"+
-		"\7\3\2\2\37 \5\4\3\2 !\7\4\2\2!%\3\2\2\2\"%\7\t\2\2#%\7\n\2\2$\35\3\2"+
-		"\2\2$\36\3\2\2\2$\"\3\2\2\2$#\3\2\2\2%\t\3\2\2\2\5\23\33$";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\13/\4\2\t\2\4\3\t"+
+		"\3\4\4\t\4\4\5\t\5\3\2\3\2\3\2\3\3\3\3\5\3\20\n\3\3\3\3\3\3\3\7\3\25\n"+
+		"\3\f\3\16\3\30\13\3\3\4\3\4\5\4\34\n\4\3\4\3\4\3\4\7\4!\n\4\f\4\16\4$"+
+		"\13\4\3\5\3\5\3\5\3\5\3\5\3\5\3\5\5\5-\n\5\3\5\2\4\4\6\6\2\4\6\b\2\4\3"+
+		"\2\5\6\3\2\7\b\2\61\2\n\3\2\2\2\4\17\3\2\2\2\6\33\3\2\2\2\b,\3\2\2\2\n"+
+		"\13\5\4\3\2\13\f\7\2\2\3\f\3\3\2\2\2\r\20\b\3\1\2\16\20\5\6\4\2\17\r\3"+
+		"\2\2\2\17\16\3\2\2\2\20\26\3\2\2\2\21\22\f\4\2\2\22\23\t\2\2\2\23\25\5"+
+		"\6\4\2\24\21\3\2\2\2\25\30\3\2\2\2\26\24\3\2\2\2\26\27\3\2\2\2\27\5\3"+
+		"\2\2\2\30\26\3\2\2\2\31\34\b\4\1\2\32\34\5\b\5\2\33\31\3\2\2\2\33\32\3"+
+		"\2\2\2\34\"\3\2\2\2\35\36\f\4\2\2\36\37\t\3\2\2\37!\5\b\5\2 \35\3\2\2"+
+		"\2!$\3\2\2\2\" \3\2\2\2\"#\3\2\2\2#\7\3\2\2\2$\"\3\2\2\2%-\3\2\2\2&\'"+
+		"\7\3\2\2\'(\5\4\3\2()\7\4\2\2)-\3\2\2\2*-\7\t\2\2+-\7\n\2\2,%\3\2\2\2"+
+		",&\3\2\2\2,*\3\2\2\2,+\3\2\2\2-\t\3\2\2\2\7\17\26\33\",";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

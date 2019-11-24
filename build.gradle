@@ -1,6 +1,6 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'java'
 
 group 'biz.brioschi'
 version '1.0'

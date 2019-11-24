@@ -38,14 +38,14 @@ public class IntergalacticExpressionVisitor extends IntergalacticExpressionBaseV
         Money result = visitMultexpression(ctx.multexpression());
         if (result != null) {
             if (ctx.PLUS() != null) {               // PLUS sumexpression
-                Money secondOperator = visitSumexpression(ctx.sumexpression());
-                if (secondOperator != null) {
-                    result = result.add(secondOperator);
+                Money firstOperator = visitSumexpression(ctx.sumexpression());
+                if (firstOperator != null) {
+                    result = firstOperator.add(result);
                 }
             } else if (ctx.MINUS() != null) {       // MINUS sumexpression
-                Money secondOperator = visitSumexpression(ctx.sumexpression());
-                if (secondOperator != null) {
-                    result = result.minus(secondOperator);
+                Money firstOperator = visitSumexpression(ctx.sumexpression());
+                if (firstOperator != null) {
+                    result = firstOperator.minus(result);
                 }
             }
         }
@@ -57,14 +57,14 @@ public class IntergalacticExpressionVisitor extends IntergalacticExpressionBaseV
         Money result = visitValue(ctx.value());
         if (result != null) {
             if (ctx.MULT() != null) {               // MULT multexpression
-                Money secondOperator = visitMultexpression(ctx.multexpression());
-                if (secondOperator != null) {
-                    result = result.mult(secondOperator);
+                Money firstOperator = visitMultexpression(ctx.multexpression());
+                if (firstOperator != null) {
+                    result = firstOperator.mult(result);
                 }
             } else if (ctx.DIV() != null) {         // DIV multexpression
-                Money secondOperator = visitMultexpression(ctx.multexpression());
-                if (secondOperator != null) {
-                    result = result.div(secondOperator);
+                Money firstOperator = visitMultexpression(ctx.multexpression());
+                if (firstOperator != null) {
+                    result = firstOperator.div(result);
                 }
             }
         }
